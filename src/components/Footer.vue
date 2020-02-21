@@ -14,10 +14,10 @@
           <h3>Useful Links</h3>
           <ul class="d-block justify-content-between flex-direction-column">
             <li><router-link to="/"><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Home</router-link></li>
-            <li><router-link to="/"><i class="fa fa-angle-right"></i>&nbsp;&nbsp;About Us</router-link></li>
-            <li><router-link to="/"><i class="fa fa-angle-right"></i>&nbsp;&nbsp;Contact Us</router-link></li>
-            <li><router-link to="/"><i class="fa fa-angle-right"></i>&nbsp;&nbsp;Service request</router-link></li>
-            <li><router-link to="/"><i class="fa fa-angle-right"></i>&nbsp;&nbsp;Track your goods</router-link></li>
+            <li><router-link to="/about"><i class="fa fa-angle-right"></i>&nbsp;&nbsp;About Us</router-link></li>
+            <li><router-link to="/contact"><i class="fa fa-angle-right"></i>&nbsp;&nbsp;Contact Us</router-link></li>
+            <li><router-link to="/request"><i class="fa fa-angle-right"></i>&nbsp;&nbsp;Service request</router-link></li>
+            <li><router-link to="/tracking"><i class="fa fa-angle-right"></i>&nbsp;&nbsp;Track your goods</router-link></li>
           </ul>
         </div>
         <div class="col-md-4">

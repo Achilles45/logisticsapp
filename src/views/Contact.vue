@@ -1,5 +1,6 @@
 <template>
   <div class="contact">
+    <Topbar />
     <Navbar />
     <div class="contact__heading container-fluid">
       <div class="container">
@@ -92,10 +93,12 @@
 </template>
 
 <script>
-import Navbar from '~/components/Navbar.vue'
-import Footer from '~/components/Footer.vue'
+import Topbar from '@/components/Topbar.vue'
+import Navbar from '@/components/Navbar.vue'
+import Footer from '@/components/Footer.vue'
 export default {
   components: {
+    Topbar,
     Navbar,
     Footer
   },

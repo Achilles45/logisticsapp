@@ -1,5 +1,6 @@
 <template>
   <div class="track">
+    <Topbar />
     <Navbar />
     <div class="track__heading">
       <div class="container">
@@ -99,10 +100,12 @@
 </template>
 
 <script>
-import Navbar from '~/components/Navbar'
-import Footer from '~/components/Footer'
+import Topbar from '@/components/Topbar'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 export default {
   components: {
+    Topbar,
     Navbar,
     Footer
   },

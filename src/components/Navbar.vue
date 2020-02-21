@@ -6,7 +6,7 @@
       >
         <div class="navbar__logo pt-2">
           <router-link to="/" class="logo"
-            ><img src="../assets/images/logo.jpeg" class="logo__img" alt=""
+            ><img src="../assets/images/logo2.png" class="logo__img" alt=""
           /></router-link>
         </div>
         <div class="navbar__links">
@@ -14,8 +14,8 @@
            <li><router-link to="/">Home</router-link></li>
            <li><router-link to="/about">About Us</router-link></li>
            <li><router-link to="/contact">Contact Us</router-link></li>
-           <li><router-link to="/traking">Track your goods</router-link></li>
-           <li><router-link to="" class="quote__btn">Request a quote</router-link></li>
+           <li><router-link to="/tracking">Track your goods</router-link></li>
+           <li><router-link to="/request" class="quote__btn">Request a quote</router-link></li>
           </ul>
         </div>
         <div class="navbar__toggler" @click="toggleNav()">
@@ -36,16 +36,6 @@ export default {
         nav.classList.toggle('show__nav')
       })
     }
-  },
-  mounted(){
-    this.fixNav()
-  },
-  fixNav(){
-    window.onscroll = ()=>{
-      if(pageYOffset > 50){
-        alert('Working ...');
-      }
-    }
   }
 }
 </script>
@@ -55,10 +45,11 @@ export default {
   background: #fff;
   // box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.4);
   color: #fff;
+  padding: .7rem 0;
   // position: fixed;
   z-index: 100;
   .logo__img {
-    max-width: 120px;
+    max-width: 90px;
     height: auto;
   }
   ul {
@@ -106,9 +97,10 @@ export default {
     position: absolute;
     padding: 23rem 2rem;
     left: 0;
-    top: 100%;
+    top: 0%;
     line-height: 4rem;
     display: none !important;
+    z-index: 1000;
     li a {
       color: #fff !important;
       line-height: 5rem;
