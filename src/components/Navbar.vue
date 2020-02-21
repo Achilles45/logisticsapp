@@ -55,11 +55,10 @@ export default {
   background: #fff;
   // box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.4);
   color: #fff;
-  padding: 0.7rem 0;
   // position: fixed;
   z-index: 100;
   .logo__img {
-    max-width: 70px;
+    max-width: 120px;
     height: auto;
   }
   ul {
