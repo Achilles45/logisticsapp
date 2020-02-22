@@ -8,7 +8,10 @@
             The Company was established to cater for domestic and commercial
             shipping world wide with our headquartered in and Branches all over
             the world.
-          </p>
+          </p> <br>
+          <h6>For enquiries, send mails to</h6>
+          <p>Isabelladangello11@gmail.com</p>
+          <p>Ericlogan533@gmail.com</p>
         </div>
         <div class="col-md-4">
           <h3>Useful Links</h3>
@@ -60,8 +63,13 @@ footer {
     text-transform: uppercase;
     opacity: 0.8;
   }
+  h6{
+    font-size: 1rem;
+    opacity: .9;
+    padding-bottom: 1rem;
+  }
   p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     opacity: 0.7;
     line-height: 1.7;
   }

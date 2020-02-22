@@ -5,6 +5,7 @@ import Contact from '../views/Contact.vue'
 import About from '../views/About'
 import Request from '../views/Request'
 import Tracking from '../views/Tracking'
+import Package from '../views/Package'
 Vue.use(VueRouter)
 
 const routes = [
@@ -35,6 +36,11 @@ const routes = [
     path: '/tracking',
     name: 'Tracking',
     component: Tracking
+  },
+  {
+    path: '/package',
+    name: 'Package',
+    component: Package
   },
 ]
 

@@ -56,8 +56,9 @@ export default {}
 
 <style lang="scss" scoped>
 .services {
-  padding: 6rem 0;
+  padding: 10rem 0;
   .heading {
+    padding-top: 2rem;
     p {
       color: #052c7d;
       font-size: 0.8rem;

@@ -8,7 +8,7 @@
           <div class="carousel-caption">
              <h5 class="animated slideInDown animate3d">Reliable and Flexible Logistics</h5>
             <h2 class="animated bounceIn animate3d">Personalized cargo services in worldwide commerce</h2>
-            <router-link to="/products" class="carousel-btn animated zoomIn animate3d">See Products</router-link>
+            <!-- <router-link to="/products" class="carousel-btn animated zoomIn animate3d">See Products</router-link> -->
           </div>
         </div>
         <div class="carousel-item">
@@ -20,7 +20,7 @@
             <p
               class="animated slideInRight animate3d"
             >The logistics partner you can trust for all your logistics needs.</p>
-            <router-link to="/contact" class="carousel-btn animated zoomIn animate3d">Invest Now</router-link>
+            <!-- <router-link to="/contact" class="carousel-btn animated zoomIn animate3d">Invest Now</router-link> -->
           </div>
         </div>
         <div class="carousel-item">
@@ -33,7 +33,7 @@
             <p
               class="animated slideInDown animate3d"
             >We design our services and products with our customers in our heart.</p>
-            <router-link to="/products" class="carousel-btn animated zoomIn animate3d">Get Started</router-link>
+            <!-- <router-link to="/products" class="carousel-btn animated zoomIn animate3d">Get Started</router-link> -->
           </div>
         </div>
       </div>

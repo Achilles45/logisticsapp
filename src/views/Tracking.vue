@@ -18,7 +18,7 @@
                 <label for="title">Insert tracking ID here</label>
                 <input
                   id="trackingId"
-                  v-model="trackingdId"
+                  v-model="trackingId"
                   type="text"
                   class="form-control"
                 />
@@ -38,6 +38,8 @@
 </template>
 
 <script>
+import db from '@/firebase/init'
+import firebase from 'firebase'
 import Topbar from '@/components/Topbar'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
@@ -49,12 +51,16 @@ export default {
   },
   data() {
     return {
-      trackingdId: null
+      trackingId: null
     }
   },
   methods: {
     track() {
-      alert('Working ...')
+      db.collection('package').where("id", "==", this.trackingId).get().then((querySnapshot) =>{
+        querySnapshot.forEach((doc) =>{
+          console.log(doc.id, '=>', doc.data())
+        })
+      })
     }
   }
 }

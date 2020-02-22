@@ -14,7 +14,7 @@
           <div class="contact__details container">
             <div class="details__card d-flex jusity-content-between">
               <div class="icon__holder">
-                <font-awesome-icon :icon="['fa', 'phone']" />
+                <i class="fa fa-phone"></i>
               </div>
               <div class="details__body">
                 <small>WE ARE ON 08:00 AM - 10:00 P.M</small>
@@ -23,7 +23,7 @@
             </div>
             <div class="details__card d-flex jusity-content-between">
               <div class="icon__holder">
-                <font-awesome-icon :icon="['fa', 'envelope']" />
+               <i class="fa fa-envelope"></i>
               </div>
               <div class="details__body">
                 <small>SEND US EMAIL ON</small>
@@ -32,11 +32,11 @@
             </div>
             <div class="details__card d-flex jusity-content-between">
               <div class="icon__holder">
-                <font-awesome-icon :icon="['fa', 'home']" />
+               <i class="fa fa-envelope"></i>
               </div>
               <div class="details__body">
                 <small>MEET US AT</small>
-                <p>Allen Avenue, Ikeja, Lagos, Nigeria</p>
+                <p>Al Khabaisi Area Dubai UAE</p>
               </div>
             </div>
           </div>
@@ -93,6 +93,8 @@
 </template>
 
 <script>
+import db from '@/firebase/init'
+import firebase from 'firebase'
 import Topbar from '@/components/Topbar.vue'
 import Navbar from '@/components/Navbar.vue'
 import Footer from '@/components/Footer.vue'
@@ -119,7 +121,12 @@ export default {
         this.err = 'Please fill out all fields in the form'
         this.removeAlert()
       } else {
-        this.success =
+        db.collection('messages').add({
+          name:this.name,
+          email:this.email,
+          subject:this.subject,
+          message:this.message
+        })
           'Your message was successfully sent. We would get back to you shortly'
         this.removeAlert()
       }

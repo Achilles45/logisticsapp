@@ -9,7 +9,7 @@
             Our Services are world class, cheap and efficient and we pride our
             selves in integrity and confidentiality
           </p>
-          <nuxt-link to="/" class="why__btn">Request a Quote</nuxt-link>
+          <router-link to="/" class="why__btn">Request a Quote</router-link>
         </div>
         <!-- <div class="col-md-1"></div> -->
         <div class="col-md-9">

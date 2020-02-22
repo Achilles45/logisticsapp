@@ -59,6 +59,7 @@
     </div>
     <div class="team__wrapper">
       <div class="container">
+        <h2>THE TEAM</h2>
         <div class="team">
           <div class="team__card">
             <img src="../assets/images/team3.jpg" class="img-fluid" alt="" />
@@ -175,6 +176,11 @@ export default {
   }
   .team__wrapper {
     background: #f5f7f9;
+    h2{
+      font-weight: bold;
+      color: #2b2b2b;
+      padding-bottom: 1rem;
+    }
     .team {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));

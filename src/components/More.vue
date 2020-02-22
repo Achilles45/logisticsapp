@@ -84,7 +84,7 @@ export default {
     .services__wrapper{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        grid-gap: 30px;
+        grid-gap: 50px;
         padding-top: 1.5rem;
         .services__card{
             .icon{
