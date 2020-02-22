@@ -38,14 +38,8 @@ export default {
   },
   methods: {
     track() {
-      this.$router.push('package')
-      db.collection('package').where("id", "==", this.trackingId).get().then((querySnapshot) =>{
-        querySnapshot.forEach((doc) =>{
-          console.log(doc.id, '=>', doc.data())
-          this.name = doc.data().name,
-          this.price = doc.data().price
-        })
-      })
+      if (!trackingId) return
+      this.$router.push(`tracking/${this.trackingId}`)
     }
   }
 }

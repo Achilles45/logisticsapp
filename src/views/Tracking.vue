@@ -12,7 +12,7 @@
       <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
-          <form action="" @submit.prevent="track()">
+          <form action="" @submit.prevent="track(trackingId)">
             <div class="form-group">
               <div class="text">
                 <label for="title">Insert tracking ID here</label>
@@ -30,6 +30,14 @@
           </form>
         </div>
         <div class="col-md-3"></div>
+      </div>
+      <div class="row" v-if="foundTrackedPackage">
+        <div class="col-md-12">
+          <h1>Package ID: {{trackedPackage.id}}</h1>
+          <p>Name: {{trackedPackage.name}}</p>
+          <p>Price: {{trackedPackage.price}}</p>
+
+        </div>
       </div>
     </div>
     <br /><br />
@@ -51,18 +59,29 @@ export default {
   },
   data() {
     return {
-      trackingId: null
+      trackingId: null,
+      foundTrackedPackage: false,
+      trackedPackage: {}
     }
   },
   methods: {
-    track() {
-      db.collection('package').where("id", "==", this.trackingId).get().then((querySnapshot) =>{
-        querySnapshot.forEach((doc) =>{
-          console.log(doc.id, '=>', doc.data())
-        })
-      })
+    async track(trackingId) {
+      if (!trackingId) return
+      const trackedPackage = await db.collection('package').doc(trackingId).get()
+      console.log(trackedPackage.data())
+      if (trackedPackage.data().id) {
+        this.trackedPackage = trackedPackage.data()
+        this.foundTrackedPackage = true
+      }
     }
-  }
+  },
+  mounted () {
+    if (this.$route.params.id) {
+      const trackingId = this.$route.params.id
+      this.trackingId = trackingId
+      this.track(trackingId)
+    }
+  },
 }
 </script>
 

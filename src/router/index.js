@@ -33,7 +33,7 @@ const routes = [
     component: Request
   },
   {
-    path: '/tracking',
+    path: '/tracking/:id',
     name: 'Tracking',
     component: Tracking
   },
