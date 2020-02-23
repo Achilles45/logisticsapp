@@ -48,7 +48,7 @@ export default {
 .tracking {
   margin-top: 3rem;
   position: absolute;
-  top: 80%;
+  top: 90%;
   width: 100%;
   .tracking__wrapper{
     background: #052c7d;

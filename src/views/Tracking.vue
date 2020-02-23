@@ -72,7 +72,7 @@
          <div class="col-md-6">
             <h5>Current State Of Consignment</h5>
             <small>This is the current state of things about this package</small><br /><br>
-          <p>Current Location: {{trackedPackage.current__location}}</p>
+          <p>Current Location: {{trackedPackage.current_location}}</p>
           <p>Current Country: {{trackedPackage.current__country}}</p>
           </div>
           </div>
