@@ -100,6 +100,8 @@
 </template>
 
 <script>
+import db from '@/firebase/init'
+import firebase from 'firebase'
 import Topbar from '@/components/Topbar'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
@@ -139,6 +141,16 @@ export default {
         this.err = 'Request failed. Please fill out every field in the form'
         this.removeAlert()
       } else {
+        db.collection('request').add({
+          type:this.type,
+          city:this.city,
+          destination:this.destination,
+          cartegory:this.cartegory,
+          weight:this.weight,
+          name:this.name,
+          email:this.email,
+          instruction:this.instruction
+        })
         this.success =
           'Your request has been sent successfully. We will get back to you shortly'
         this.removeAlert()

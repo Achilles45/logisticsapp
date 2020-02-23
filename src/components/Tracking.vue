@@ -89,7 +89,7 @@ export default {
 //MEDIA QUERIES
 @media only screen and (max-width: 600px){
  .tracking{
-   top: 60%;
+   top: 80%;
     .tracking__wrapper{
     padding: 1rem 2rem !important;
     .text{

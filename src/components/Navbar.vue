@@ -14,7 +14,6 @@
            <li><router-link to="/">Home</router-link></li>
            <li><router-link to="/about">About Us</router-link></li>
            <li><router-link to="/contact">Contact Us</router-link></li>
-           <li><router-link to="/tracking">Track your goods</router-link></li>
            <li><router-link to="/request" class="quote__btn">Request a quote</router-link></li>
           </ul>
         </div>
@@ -28,6 +27,9 @@
 
 <script>
 export default {
+   mounted(){
+       this.fixNav();
+    },
   methods: {
     toggleNav() {
       const navbarToggler = document.querySelector('.navbar__toggler')
@@ -35,7 +37,17 @@ export default {
       navbarToggler.addEventListener('click', () => {
         nav.classList.toggle('show__nav')
       })
-    }
+    },
+    fixNav:function(){
+             const nav = document.querySelector('.navbar__wrapper');
+            window.onscroll = function(){
+                if (window.pageYOffset > 120) {
+                    nav.classList.add('fix__nav');
+                }else{
+                    nav.classList.remove('fix__nav');
+                }
+            }
+        }
   }
 }
 </script>
@@ -57,7 +69,7 @@ export default {
       text-decoration: none;
       color: #052c7d;
       text-transform: uppercase;
-      font-size: 0.75rem;
+      font-size: 0.85rem;
       opacity: 0.8;
       margin: 0 0.6rem;
       font-weight: bold;
@@ -75,7 +87,7 @@ export default {
       font-weight: normal;
       &:hover {
         color: #fff !important;
-        padding: 1rem 2.5rem;
+        padding: 1rem 3.7rem;
         transition: all ease-in-out 0.5s;
       }
     }
