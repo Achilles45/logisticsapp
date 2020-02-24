@@ -26,54 +26,55 @@
             <table class="table mt-5">
   <tbody>
     <tr>
-      <td>PACKAGE ID</td>
-      <td>{{trackedPackage.id}}</td>
+      <td>DELIVERING STATUS FOR</td>
+      <td>{{trackedPackage.receiver}}</td>
     </tr>
      <tr>
-      <td>PACKAGE NAME</td>
-      <td>{{trackedPackage.name}}</td>
+      <td>ITEMS</td>
+      <td>{{trackedPackage.items}}</td>
     </tr>
      <tr>
-      <td>PACKAGE PRICE</td>
-      <td>{{trackedPackage.price}}</td>
+      <td>WEIGHT OF THE ITEMS</td>
+      <td>{{trackedPackage.weight}}</td>
     </tr>
     <tr>
-      <td>DATE OF PURCHASE</td>
-      <td>{{trackedPackage.date__of__purchase}}</td>
+      <td>INSURANCE COVER AND CUSTOM DUTY</td>
+      <td>{{trackedPackage.insurance}}</td>
     </tr>
      <tr>
-      <td>EXPECTED DATE OF DELIVERY</td>
-      <td>{{trackedPackage.expected__date}}</td>
+      <td>PRESENT LOCATION</td>
+      <td class="location">{{trackedPackage.location}}</td>
     </tr>
     <tr>
-      <td>BUYERS NAME</td>
-      <td>{{trackedPackage.buyers__name}}</td>
+      <td>SENDER'S NAME</td>
+      <td>{{trackedPackage.sender__name}}</td>
     </tr>
     <tr>
-      <td>BUYERS EMAIL</td>
-      <td>{{trackedPackage.buyers__email}}</td>
+      <td>SENDER'S ADDRESS</td>
+      <td>{{trackedPackage.shipment_date}}</td>
     </tr>
     <tr>
-      <td>BUYERS CONTACT ADDRESS</td>
-      <td>{{trackedPackage.buyers__contact}}</td>
+      <td>RECEIVER'S NAME</td>
+      <td>{{trackedPackage.receiver}}</td>
     </tr>
     <tr>
-      <td>SELLERS NAME</td>
-      <td>{{trackedPackage.sellers__name}}</td>
+      <td>SHIPPING ADDRESS</td>
+      <td>{{trackedPackage.shipping_address}}</td>
     </tr>
     <tr>
-      <td>SELLERS EMAIL</td>
-      <td>{{trackedPackage.sellers__email}}</td>
+      <td>PRESENT DESTINATION DELIVERING STATUS</td>
+      <td class="destination">{{trackedPackage.status}}</td>
     </tr>
      <tr>
-      <td>CURRENT LOCATION</td>
-      <td>{{trackedPackage.current_location}}</td>
+      <td>FINAL DESTINATION DELIVERING DATE</td>
+      <td>{{trackedPackage.final}}</td>
     </tr>
     <tr>
-      <td>COUNTRY</td>
-      <td>{{trackedPackage.current__country}}</td>
+      <td>COMMENT</td>
+      <td class="comment">{{trackedPackage.current__country}}</td>
     </tr>
   </tbody>
+  Lorem ipsum dolor sit amet.
 </table>
           </div>
         </div>
@@ -196,5 +197,16 @@ table{
   color:#fff;
   opacity: .8;
   font-size: .9rem;
+  text-transform: uppercase !important;
+}
+
+.location{
+  color: green !important;
+}
+.destination{
+  color:red !important;
+}
+.comment{
+  color: blue !important
 }
 </style>
