@@ -33,7 +33,7 @@
       </div>
       <div class="row" v-if="foundTrackedPackage">
         <div class="col-md-12">
-          <h1>Package ID: {{trackedPackage.id}}</h1>
+          <!-- <h1>Package ID: {{trackedPackage.id}}</h1> -->
           <p>Name: {{trackedPackage.name}}</p>
           <p>Price: {{trackedPackage.price}}</p>
 
