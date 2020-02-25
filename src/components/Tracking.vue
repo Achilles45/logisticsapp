@@ -50,6 +50,7 @@ export default {
   position: absolute;
   top: 90%;
   width: 100%;
+  z-index: 1000 !important;
   .tracking__wrapper{
     background: #052c7d;
     padding: 1.5rem 5rem;
