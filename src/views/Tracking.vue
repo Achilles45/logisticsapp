@@ -2,16 +2,10 @@
   <div class="track">
     <Topbar />
     <Navbar />
-    <div class="track__heading">
-      <div class="container">
-        <h2>Track Your Items</h2>
-        <p>Get real time information on the state of your shipments</p>
-      </div>
-    </div>
     <div class="container">
       <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 content__holder">
           <form action="" @submit.prevent="track(trackingId)">
             <div class="form-group">
               <div class="text">
@@ -28,19 +22,65 @@
               </button>
             </div>
           </form>
+          <div class="result__wrapper">
+            <table class="table mt-5">
+  <tbody>
+    <tr>
+      <td>DELIVERING STATUS FOR</td>
+      <td>{{trackedPackage.receiver}}</td>
+    </tr>
+     <tr>
+      <td>ITEMS</td>
+      <td>{{trackedPackage.items}}</td>
+    </tr>
+     <tr>
+      <td>WEIGHT OF THE ITEMS</td>
+      <td>{{trackedPackage.weight}}</td>
+    </tr>
+    <tr>
+      <td>INSURANCE COVER AND CUSTOM DUTY</td>
+      <td>{{trackedPackage.insurance}}</td>
+    </tr>
+     <tr>
+      <td>PRESENT LOCATION</td>
+      <td class="location">{{trackedPackage.location}}</td>
+    </tr>
+    <tr>
+      <td>SENDER'S NAME</td>
+      <td>{{trackedPackage.sender__name}}</td>
+    </tr>
+    <tr>
+      <td>SENDER'S ADDRESS</td>
+      <td>{{trackedPackage.shipment_date}}</td>
+    </tr>
+    <tr>
+      <td>RECEIVER'S NAME</td>
+      <td>{{trackedPackage.receiver}}</td>
+    </tr>
+    <tr>
+      <td>SHIPPING ADDRESS</td>
+      <td>{{trackedPackage.shipping_address}}</td>
+    </tr>
+    <tr>
+      <td>PRESENT DESTINATION DELIVERING STATUS</td>
+      <td class="destination">{{trackedPackage.status}}</td>
+    </tr>
+     <tr>
+      <td>FINAL DESTINATION DELIVERING DATE</td>
+      <td>{{trackedPackage.final}}</td>
+    </tr>
+    <tr>
+      <td>COMMENT</td>
+      <td class="comment">{{trackedPackage.current__country}}</td>
+    </tr>
+  </tbody>
+  Lorem ipsum dolor sit amet.
+</table>
+          </div>
         </div>
-        <div class="col-md-3"></div>
-      </div>
-      <div class="row" v-if="foundTrackedPackage">
-        <div class="col-md-12">
-          <!-- <h1>Package ID: {{trackedPackage.id}}</h1> -->
-          <p>Name: {{trackedPackage.name}}</p>
-          <p>Price: {{trackedPackage.price}}</p>
-
-        </div>
+        <div class="col-md-2"></div>
       </div>
     </div>
-    <br /><br />
     <Footer />
   </div>
 </template>
@@ -87,10 +127,14 @@ export default {
 
 <style lang="scss" scoped>
 .track {
-  background: #f4f4f4;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('../assets/images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   .track__heading {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-      url('../assets/images/banner.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('../assets/images/map.jpeg');
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -106,11 +150,25 @@ export default {
       color: #fff;
     }
   }
-  form {
-    margin-top: 9rem;
-    margin-bottom: 8rem;
+  .result__holder{
+    background:rgba(0,0,0,.5);
+  }
+ .content__holder{
+   background: rgba(0, 0, 0, 0.5);
+   color: #fff;
+   hr{
+  background:#fff !important;
+   }
+   h5{
+     color:#fff;
+     font-weight: normal;
+     font-size: 1rem;
+   }
+    form {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
     label {
-      color: #545454;
+      color: #fff;
       font-size: 0.84rem;
       opacity: 0.9;
       padding-bottom: 0.5rem;
@@ -133,5 +191,22 @@ export default {
       font-size: 0.85rem;
     }
   }
+ }
+}
+table{
+  color:#fff;
+  opacity: .8;
+  font-size: .9rem;
+  text-transform: uppercase !important;
+}
+
+.location{
+  color: green !important;
+}
+.destination{
+  color:red !important;
+}
+.comment{
+  color: blue !important
 }
 </style>

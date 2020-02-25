@@ -1,7 +1,7 @@
 <template>
   <div class="services">
     <div class="container">
-      <div class="row">
+      <div class="row pt-5">
         <div class="col-12 heading text-center">
           <p>WHAT WE PROVIDE FOR CLIENTS AMONG OTHERS</p>
           <h1>QUICK CARGO SERVICES</h1>
