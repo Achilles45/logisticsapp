@@ -27,7 +27,7 @@
               <tbody>
                 <tr>
                   <td>DELIVERING STATUS FOR</td>
-                  <td>{{ trackedPackage.receiver }}</td>
+                  <td>{{ trackedPackage.receiver_name }}</td>
                 </tr>
                 <tr>
                   <td>ITEMS</td>
@@ -47,15 +47,15 @@
                 </tr>
                 <tr>
                   <td>SENDER'S NAME</td>
-                  <td>{{ trackedPackage.sender__name }}</td>
+                  <td>{{ trackedPackage.sender_name }}</td>
                 </tr>
                 <tr>
                   <td>SENDER'S ADDRESS</td>
-                  <td>{{ trackedPackage.shipment_date }}</td>
+                  <td>{{ trackedPackage.sender_address }}</td>
                 </tr>
                 <tr>
                   <td>RECEIVER'S NAME</td>
-                  <td>{{ trackedPackage.receiver }}</td>
+                  <td>{{ trackedPackage.receiver_name }}</td>
                 </tr>
                 <tr>
                   <td>SHIPPING ADDRESS</td>
@@ -67,14 +67,13 @@
                 </tr>
                 <tr>
                   <td>FINAL DESTINATION DELIVERING DATE</td>
-                  <td>{{ trackedPackage.final }}</td>
+                  <td>{{ trackedPackage.shipment_date }}</td>
                 </tr>
                 <tr>
                   <td>COMMENT</td>
-                  <td class="comment">{{ trackedPackage.current__country }}</td>
+                  <td class="comment">{{ trackedPackage.comment }}</td>
                 </tr>
               </tbody>
-              Lorem ipsum dolor sit amet.
             </table>
           </div>
         </div>
