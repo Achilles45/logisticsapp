@@ -12,6 +12,8 @@
           <h6>For enquiries, send mails to</h6>
           <p>Isabelladangello11@gmail.com</p>
           <p>Ericlogan533@gmail.com</p>
+          <h6>You can also contact us at</h6>
+          <p>Al Khabaisi Area Dubai UAE</p>
         </div>
         <div class="col-md-4">
           <h3>Useful Links</h3>
