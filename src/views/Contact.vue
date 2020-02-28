@@ -17,8 +17,8 @@
                 <i class="fa fa-phone"></i>
               </div>
               <div class="details__body">
-                <small>WE ARE ON 08:00 AM - 10:00 P.M</small>
-                <p>Call : 0715 763 362</p>
+                <small>WE ARE ON<br /> 08:00 AM - 10:00 P.M</small>
+                <p></p>
               </div>
             </div>
             <div class="details__card d-flex jusity-content-between">
