@@ -6,6 +6,7 @@ import About from '../views/About'
 import Request from '../views/Request'
 import Tracking from '../views/Tracking'
 import Package from '../views/Package'
+import Add from '../views/Add'
 Vue.use(VueRouter)
 
 const routes = [
@@ -41,6 +42,11 @@ const routes = [
     path: '/package',
     name: 'Package',
     component: Package
+  },
+   {
+    path: '/add',
+    name: 'add',
+    component: Add
   },
 ]
 
