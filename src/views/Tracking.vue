@@ -114,7 +114,7 @@ export default {
       // wrapping in a try catch block for error handling
       try {
         const trackedPackage = await db
-          .collection("packages")
+          .collection("package")
           .doc(trackingId)
           .get();
         this.trackedPackage = trackedPackage.data();
