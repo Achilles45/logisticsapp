@@ -5,9 +5,10 @@
         class="navbar__contents d-flex justify-content-between align-items-center"
       >
         <div class="navbar__logo pt-2">
-          <router-link to="/" class="logo"
-            ><img src="../assets/images/logo2.png" class="logo__img" alt=""
-          /></router-link>
+          <router-link to="/" class="logo">
+          <h5><img src="../assets/images/logo2.png" class="logo__img" alt=""
+          /> WORLD GLOBAL EXPRESS</h5>
+          </router-link>
         </div>
         <div class="navbar__links">
           <ul class="d-flex navbar__items justify-content-between pt-3">
@@ -60,6 +61,13 @@ export default {
   padding: .7rem 0;
   // position: fixed;
   z-index: 100;
+  .logo{
+       text-decoration: none !important;
+  }
+  h5{
+    font-weight: bolder;
+    color:#000;
+  }
   .logo__img {
     max-width: 90px;
     height: auto;
