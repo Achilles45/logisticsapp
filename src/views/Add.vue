@@ -137,7 +137,7 @@ export default {
                 this.err = 'Error. Please make sure all fields has been filled out first'
             }else{
                 //Create a new package in firestore now
-                db.collection('packages').add({
+                db.collection('package').add({
                     comment:this.comment,
                     delivery_date:this.delivery_date,
                     insurance:this.insurance,
