@@ -7,7 +7,7 @@
         <div class="navbar__logo pt-2">
           <router-link to="/" class="logo">
           <h5><img src="../assets/images/logo2.png" class="logo__img" alt=""
-          /> WORLD GLOBAL EXPRESS</h5>
+          /> <span class="blue">WORLD</span> <span class="red">GLOBAL EXPRESS</span></h5>
           </router-link>
         </div>
         <div class="navbar__links">
@@ -67,6 +67,12 @@ export default {
   h5{
     font-weight: bolder;
     color:#000;
+  }
+  .blue{
+    color:blue;
+  }
+  .red{
+    color:red;
   }
   .logo__img {
     max-width: 90px;
