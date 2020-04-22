@@ -10,6 +10,9 @@
             <div class="form-group">
               <div class="text">
                 <label for="title">Insert tracking ID here</label>
+                <div v-if="err" class="alert alert-danger">
+                  {{ err }}
+                </div>
                 <input
                   id="trackingId"
                   v-model="trackingId"
@@ -18,7 +21,7 @@
                 />
               </div>
               <button type="submit" class="form__btn">
-                Track your shipments here
+                {{ button__text}}
               </button>
             </div>
           </form>
@@ -104,11 +107,14 @@ export default {
     return {
       trackingId: null,
       foundTrackedPackage: false,
-      trackedPackage: null
+      trackedPackage: null,
+      button__text: 'Track your package here',
+      err:null
     };
   },
   methods: {
     async track(trackingId) {
+      this.button__text = 'Loading .....'
       if (!trackingId) return;
 
       // wrapping in a try catch block for error handling
@@ -119,8 +125,9 @@ export default {
           .get();
         this.trackedPackage = trackedPackage.data();
         this.foundTrackedPackage = true;
+        this.button__text = 'See tracking result below'
       } catch (error) {
-        alert(error.message);
+        this.err = 'Tracking failed. Please check your internet connection and try again!'
       }
     }
   },
