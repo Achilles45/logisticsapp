@@ -17,7 +17,7 @@
                 <i class="fa fa-phone"></i>
               </div>
               <div class="details__body">
-                <small>WE ARE ON<br /> 08:00 AM - 10:00 P.M</small>
+                <small>WhatsApp Only<br /> +44 7451 274372</small>
                 <p></p>
               </div>
             </div>
