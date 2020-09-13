@@ -1,6 +1,7 @@
 <template>
   <div class="app">
-    <Topbar />
+    <Wrapper />
+    <!-- <Topbar />
     <Navbar />
     <Banner />
     <Tracking />
@@ -9,11 +10,12 @@
     <Gallery />
     <More />
     <Testimonials />
-    <Footer />
+    <Footer /> -->
   </div>
 </template>
 
 <script>
+import Wrapper from "@/components/Wrapper.vue"
 import Topbar from '@/components/Topbar.vue'
 import Navbar from '@/components/Navbar.vue'
 import Banner from '@/components/Banner.vue'
@@ -27,6 +29,7 @@ import Footer from '@/components/Footer.vue'
 
 export default {
   components: {
+    Wrapper,
     Topbar,
     Navbar,
     Banner,
