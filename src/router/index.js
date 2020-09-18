@@ -15,39 +15,39 @@ const routes = [
     name: 'index',
     component: index
   },
-  // {
-  //   path: '/about',
-  //   name: 'About',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: About
-  // },
-  // {
-  //   path: '/contact',
-  //   name: 'Contact',
-  //   component: Contact
-  // },
-  // {
-  //   path: '/request',
-  //   name: 'Request',
-  //   component: Request
-  // },
-  // {
-  //   path: '/tracking/:id',
-  //   name: 'Tracking',
-  //   component: Tracking
-  // },
-  // {
-  //   path: '/package',
-  //   name: 'Package',
-  //   component: Package
-  // },
-  //  {
-  //   path: '/add',
-  //   name: 'add',
-  //   component: Add
-  // },
+  {
+    path: '/about',
+    name: 'About',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: About
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: Contact
+  },
+  {
+    path: '/request',
+    name: 'Request',
+    component: Request
+  },
+  {
+    path: '/tracking/:id',
+    name: 'Tracking',
+    component: Tracking
+  },
+  {
+    path: '/package',
+    name: 'Package',
+    component: Package
+  },
+   {
+    path: '/add',
+    name: 'add',
+    component: Add
+  },
 ]
 
 const router = new VueRouter({

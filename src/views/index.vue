@@ -1,7 +1,7 @@
 <template>
   <div class="app">
-    <Wrapper />
-    <!-- <Topbar />
+    <!-- <Wrapper /> -->
+    <Topbar />
     <Navbar />
     <Banner />
     <Tracking />
@@ -10,7 +10,7 @@
     <Gallery />
     <More />
     <Testimonials />
-    <Footer /> -->
+    <Footer />
   </div>
 </template>
 
@@ -29,7 +29,7 @@ import Footer from '@/components/Footer.vue'
 
 export default {
   components: {
-    Wrapper,
+    // Wrapper,
     Topbar,
     Navbar,
     Banner,
