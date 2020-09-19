@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import index from '../views/index.vue'
-// import Contact from '../views/Contact.vue'
-// import About from '../views/About'
-// import Request from '../views/Request'
-// import Tracking from '../views/Tracking'
-// import Package from '../views/Package'
-// import Add from '../views/Add'
+import Contact from '../views/Contact.vue'
+import About from '../views/About'
+import Request from '../views/Request'
+import Tracking from '../views/Tracking'
+import Package from '../views/Package'
+import Add from '../views/Add'
 Vue.use(VueRouter)
 
 const routes = [
